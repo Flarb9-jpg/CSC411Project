@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Welcome">
+
+    <fragment
+        android:id="@+id/Welcome"
+        android:name="com.example.csc411project.Welcome"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/welcome">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/Login" />
+    </fragment>
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.example.csc411project.Login"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/login">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/Welcome" />
+        <action
+            android:id="@+id/action_SecondFragment_to_HomeFragment"
+            app:destination="@id/Home" />
+    </fragment>
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.csc411project.HomeScreen"
+        android:label="Home"
+        tools:layout="@layout/home_screen">
+        <action
+            android:id="@+id/action_HomeFragment_to_TutorialFragment"
+            app:destination="@id/Tutorial" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SettingsFragment"
+            app:destination="@id/Settings" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Tutorial"
+        android:name="com.example.csc411project.Tutorial"
+        android:label="Tutorial"
+        tools:layout="@layout/tutorial">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/Settings"
+        android:name="com.example.csc411project.Settings"
+        android:label="Settings"
+        tools:layout="@layout/settings">
+
+
+    </fragment>
+</navigation>
